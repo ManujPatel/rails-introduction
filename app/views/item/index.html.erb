@@ -1,0 +1,9 @@
+<h1>Items Index</h1>
+<%= button_to "Add New item", new_item_path, method: :get %>
+<ul>
+    <% @items.each do |item|%>
+        <li><%= link_to item.name, item_path(item)%></li>
+    <%end%>
+</ul>
+<p>Find me in app/views/item/new.html.erb</p>
+

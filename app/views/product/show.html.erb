@@ -1,0 +1,9 @@
+<h1><%= @product.name%>'s page</h1>
+
+<h2>Description: <%=@product.description%></h2>
+<h3>Price: <%=@product.price%></h3>
+
+<%= button_to "Edit Product", edit_product_path, method: :get%>
+<%= button_to "Destroy Product",product_path,method: :delete%>
+
+<%= link_to "Destroy Product", product_path%>

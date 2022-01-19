@@ -1,0 +1,18 @@
+<h1>Items New Form</h1>
+
+<% if flash[:errors] %>
+    <% flash[.errors].each do |error|%>
+        <p style="colour: red"><%= error%></p>
+    <%end%>
+<%end%>
+
+
+<%= form_for @item do |f|%>
+    <%= f.label :name%>
+    <%= f.text_field :name %>
+    <%= f.label :description%>
+    <%= f.text_field :description %>
+    <%= f.label :price%>
+    <%= f.number_field :price %>
+    <%= f.submit%>
+<%end%>
